@@ -1,0 +1,63 @@
+/*.carouselImage{*/
+
+/*!*    width: 60%;*!*/
+/*!*    margin-left: 50%;*!*/
+/*!*    !*margin-right: 50%;*!*!*/
+
+/*}*/
+.carousel-inner img {
+    margin: auto;
+    width: 60%;
+}
+
+.carousel-control-prev {
+    left: 15%;
+    color:#fff;
+}
+
+.carousel-control-next {
+    right: 15%;
+    background-image: none;
+    color: #ffffff;
+}
+.carousel-indicators > li {
+    border-radius: 50%;
+}
+#myCarousel-indicators > li {
+    border-radius: 50%;
+}
+.carousel .carousel-indicators button {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: large;
+}
+
+.spacing{
+    margin-bottom: 10%;
+}
+
+
+/*MEDIA QUERIES */
+@media only screen and (max-width: 800px){
+
+    .sacramento-Bigger {
+        color: red;
+        font-size: 35px;
+    }
+
+
+    .carousel .carousel-indicators button {
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+    }
+
+
+}
