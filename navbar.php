@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse sacramento-regular" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Seasonal</a>
+                    <a class="nav-link active" aria-current="page" href="seasonal.php">Seasonal</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Pots</a>
