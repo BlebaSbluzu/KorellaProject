@@ -32,6 +32,9 @@
                     <a class="nav-link active" aria-current="page" href="seasonal.php">Seasonal</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Pots</a>
                 </li>
                 <li class="nav-item">
@@ -46,6 +49,7 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Shopping Cart</a>
                 </li>
+
 
 
 
