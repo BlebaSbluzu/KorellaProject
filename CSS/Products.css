@@ -1,0 +1,17 @@
+.product-container {
+    overflow: hidden; /* Clear floats */
+}
+
+.product-image {
+    float: left;
+    margin-right: 20px; /* Add spacing between image and text */
+}
+
+.product-info {
+    margin-left: 330px; /* Adjust as needed based on image width */
+}
+
+.product-info p {
+    margin-top: 0; /* Remove default paragraph margin */
+    margin-bottom: 10px; /* Add margin between paragraphs */
+}
