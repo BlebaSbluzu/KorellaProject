@@ -13,5 +13,19 @@
     </div>
 </div>
 
-<img src="../Images/lilac%20pruning.jpg">
+<div class="product-container2">
+    <img src="../Images/lilac%20pruning.jpg" class="product-image2" width="400" height="400">
+    <div class="product-info2">
+        <h1>How to look after your Pink Lilacs:</h1>
+        <ul>
+            <li>Location: Plant in a sunny spot with well-draining soil</li>
+            <li>Watering: Keep the soil evenly moist, especially during the first growing season</li>
+            <li>Pruning: Prune after flowering to remove spent blooms and shape the plant and remove old or damaged branches to encourage new growth</li>
+            <li>Fertilizing: Apply a balanced fertilizer in early spring before new growth begins</li>
+            <li>Pest and Disease Control: Monitor for pests and diseases regularly and treat promptly</li>
+        </ul>
+
+    </div>
+
+</div>
 

@@ -1,17 +1,42 @@
+/*Container 1 layout*/
 .product-container {
-    overflow: hidden; /* Clear floats */
+    overflow: hidden;
 }
 
 .product-image {
     float: left;
-    margin-right: 20px; /* Add spacing between image and text */
+    margin-right: 20px;
 }
 
 .product-info {
-    margin-left: 330px; /* Adjust as needed based on image width */
+    margin-left: 330px;
 }
 
 .product-info p {
-    margin-top: 0; /* Remove default paragraph margin */
-    margin-bottom: 10px; /* Add margin between paragraphs */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+
+/*Container 2 layout*/
+  .product-container2 {
+   overflow: hidden;
+}
+
+.product-info2 {
+    float: left;
+    align-items: center;
+    margin-left: 300px;
+}
+
+.product-image2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+h1{
+    color: #0a3622;
+    font-family: "Berlin Sans FB";
+    font-size: 35px;
 }
