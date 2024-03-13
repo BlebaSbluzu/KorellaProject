@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML 5 Boilerplate</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="Main.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/Main.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Sacramento&family=Yellowtail&display=swap" rel="stylesheet">
@@ -19,9 +19,9 @@
 
 <nav id="OverwriteNAV" class="navbar navbar-expand-lg ">
     <div class="container-fluid">
-        <a class="navbar-brand" href="home.php">
+        <a class="navbar-brand" href="../Pages/home.php">
 <!--            Navbar-->
-            <img src="Images/logo4.PNG" alt="Logo" width="80" height="80">
+            <img src="../Images/logo4.PNG" alt="Logo" width="80" height="80">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse sacramento-regular" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="seasonal.php">Seasonal</a>
+                    <a class="nav-link active" aria-current="page" href="../Pages/seasonal.php">Seasonal</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Shop</a>

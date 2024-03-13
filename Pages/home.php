@@ -1,8 +1,8 @@
 
-<?php require "navbar.php"; ?>
+<?php require "../Layout/navbar.php"; ?>
 
-<link rel="stylesheet" href="Main.css" type="text/css">
-<link rel="stylesheet" href="CSS/Home.css" type="text/css">
+<link rel="stylesheet" href="../CSS/Main.css" type="text/css">
+<link rel="stylesheet" href="../CSS/Home.css" type="text/css">
 <!--<h1>--><?php //echo 'Hello World'; ?><!--</h1>-->
 
 <div id="carouselExampleCaptions" class="carousel slide carousel-fade spacing" data-bs-ride="carousel">
@@ -13,21 +13,21 @@
     </div>
     <div class="carousel-inner sacramento-Bigger">
         <div class="carousel-item active">
-            <img src="Images/rose.jpg" class="d-block carouselImage" alt="Rose for sale">
+            <img src="../Images/rose.jpg" class="d-block carouselImage" alt="Rose for sale">
             <div class="carousel-caption d-none d-md-block">
                 <p>Check our seasonal bulbs here!</p>
 <!--                <p>Some representative placeholder content for the first slide.</p>-->
             </div>
         </div>
         <div class="carousel-item">
-            <img src="Images/shrub.jpg" class="d-block w-carouselImage" alt="...">
+            <img src="../Images/shrub.jpg" class="d-block w-carouselImage" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <p>Shrubs and Bushes!</p>
 <!--                <p>Some representative placeholder content for the second slide.</p>-->
             </div>
         </div>
         <div class="carousel-item">
-            <img src="Images/julyFlower.jpg" class="d-block carouselImage" alt="...">
+            <img src="../Images/julyFlower.jpg" class="d-block carouselImage" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <p>Flower beds and other decoration</p>
 <!--                <p>Some representative placeholder content for the third slide.</p>-->
