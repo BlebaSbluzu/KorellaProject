@@ -8,9 +8,12 @@
 <div class="row">
     <div class="column">
         <div class="container">
+            <a href="lilacs.php">
             <img src="../Images/Lilacs(Spring).jpg" alt="Spring Lilacs" title="Lilacs" width="200" height="200">
-            <div class="text">
-                <h1>Lilacs</h1>
+            </a>
+                <div class="text">
+                    <h1>Lilacs</h1>
+
             </div>
         </div>
     </div>
