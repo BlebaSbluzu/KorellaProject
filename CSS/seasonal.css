@@ -34,7 +34,7 @@ h6{
 
 .container {
     position: relative;
-    text-align: center; /* Center the content horizontally */
+    text-align: center;
 }
 
 
@@ -43,7 +43,7 @@ h6{
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; /* Center the image horizontally */
+    margin: 0 auto;
 }
 
 .text {
