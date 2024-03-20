@@ -1,0 +1,10 @@
+#cardStyles{
+    width:4rem;
+    margin: 2rem;
+    background-color: red;
+}
+#cardRow{
+    /*margin: auto 20rem;*/
+    width: 75%;
+    margin: 5rem auto;
+}

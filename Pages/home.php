@@ -1,4 +1,42 @@
 
+<?php
+
+//PDO Bastard
+
+
+//try {
+//    $pdo = new PDO('mysql:dbname=gardencentredb;host=localhost:8000', 'root', 'root');
+//    $result = $pdo->query('SELECT * FROM Orders');
+//    $rows = $result->fetchAll();
+//    var_dump();
+//    die();
+//}catch(PDOException $err){
+//    echo "Problem-cry". $err->getMessage();
+//    exit();
+//}
+
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "GardenCentredb";
+
+$conn = mysqli_connect($servername,$username,$password,$dbname);
+
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+else{
+    echo "Hurray!";
+}
+
+$sql = "SELECT * from orders";
+$qryResult = mysqli_query($conn,$sql);
+
+while($row = mysqli_fetch_assoc($qryResult)){
+    echo "Order ID: " . $row["OrdersId"]. " -Cost of Order: " . $row["Cost"];
+}
+
+?>
 <?php require "../Layout/navbar.php"; ?>
 
 <link rel="stylesheet" href="../CSS/Main.css" type="text/css">
@@ -44,36 +82,4 @@
     </button>
 </div>
 
-
-<div class="card-group">
-    <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-    </div>
-    <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        </div>
-        <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-    </div>
-    <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        </div>
-        <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-    </div>
-</div>
+<?php require "./Recommended.php" ?>
