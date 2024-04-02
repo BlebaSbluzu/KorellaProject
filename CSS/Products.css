@@ -6,6 +6,8 @@
 .product-image {
     float: left;
     margin-right: 20px;
+    width: 300px;
+    height: 300px;
 }
 
 .product-info {
@@ -33,10 +35,16 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    width: 400px;
+    height: 400px;
 }
 
 h1{
     color: #0a3622;
     font-family: "Berlin Sans FB";
     font-size: 35px;
+}
+
+.add{
+    background-color: #fd7e14;
 }

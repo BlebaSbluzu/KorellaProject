@@ -1,9 +1,12 @@
 <?php require "../Layout/navbar.php"; ?>
 
+
 <link rel="stylesheet" href="../CSS/Main.css" type="text/css">
 <link rel="stylesheet" href="../CSS/seasonal.css" type="text/css">
 
 <h2>Spring</h2>
+
+
 
 <div class="row">
     <div class="column">
@@ -29,10 +32,12 @@
 
 
 <h3>Summer</h3>
+
+
 <div class="row">
     <div class="column">
         <div class="container">
-            <a href=><img src="../Images/ArthurBellRoses.jpg" alt="Roses" title="Arthur Bell Roses" width="200" height="300"></a>
+            <a href="ArthurBellRoses.php"><img src="../Images/ArthurBellRoses.jpg" alt="Arthur Bell Roses" title="Arthur Bell Roses" width="200" height="200"></a>
             <div class="text">
                 <h1>Arthur Bell Roses</h1>
             </div>
@@ -48,8 +53,9 @@
 </div>
 
 
-
 <h4>Autumn</h4>
+
+
     <div class="row">
         <div class="column">
             <div class="container">
@@ -70,6 +76,8 @@
 
 
 <h6>Winter</h6>
+
+
         <div class="row">
             <div class="column">
                 <div class="container">
@@ -87,3 +95,4 @@
                     </div>
                 </div>
             </div>
+
