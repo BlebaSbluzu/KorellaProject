@@ -20,12 +20,26 @@ body{background-color: #c1fabc;}
     font-weight: 400;
     font-style: normal;
 }
+
 .great-vibes-regular {
     font-family: "Great Vibes", cursive;
     font-weight: 400;
     font-style: normal;
 }
+
 .nav-item{
     margin:0 10px 0 10px;
 }
 
+.Titles{
+    margin: auto 40%;
+
+    border: 5px white;
+}
+
+.hrs{
+    color: white;
+    height: 15px;
+    width: 75%;
+    border-top: 10px solid white;
+}
