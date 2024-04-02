@@ -4,37 +4,38 @@
 //PDO Bastard
 
 
-//try {
-//    $pdo = new PDO('mysql:dbname=gardencentredb;host=localhost:8000', 'root', 'root');
-//    $result = $pdo->query('SELECT * FROM Orders');
-//    $rows = $result->fetchAll();
-//    var_dump();
-//    die();
-//}catch(PDOException $err){
-//    echo "Problem-cry". $err->getMessage();
-//    exit();
+try {
+    $pdo = new PDO('mysql:dbname=gardencentredb;host=localhost', 'root', 'root');
+    echo "try block" +$pdo;
+    $result = $pdo->query('SELECT * FROM Orders');
+    $rows = $result->fetchAll();
+    var_dump();
+    die();
+}catch(PDOException $err){
+    echo "Problem-cry". $err->getMessage();
+    exit();
+}
+//
+//$servername = "localhost";
+//$username = "root";
+//$password = "root";
+//$dbname = "GardenCentredb";
+//
+//$conn = mysqli_connect($servername,$username,$password,$dbname);
+//
+//    if (!$conn) {
+//        die("Connection failed: " . mysqli_connect_error());
+//    }
+//else{
+//    echo "Hurray!";
 //}
-
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "GardenCentredb";
-
-$conn = mysqli_connect($servername,$username,$password,$dbname);
-
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-else{
-    echo "Hurray!";
-}
-
-$sql = "SELECT * from orders";
-$qryResult = mysqli_query($conn,$sql);
-
-while($row = mysqli_fetch_assoc($qryResult)){
-    echo "Order ID: " . $row["OrdersId"]. " -Cost of Order: " . $row["Cost"];
-}
+//
+//$sql = "SELECT * from orders";
+//$qryResult = mysqli_query($conn,$sql);
+//
+//while($row = mysqli_fetch_assoc($qryResult)){
+//    echo "Order ID: " . $row["OrdersId"]. " -Cost of Order: " . $row["Cost"];
+//}
 
 ?>
 <?php require "../Layout/navbar.php"; ?>
