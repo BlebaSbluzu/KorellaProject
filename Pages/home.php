@@ -5,12 +5,10 @@
 
 
 try {
-    $pdo = new PDO('mysql:dbname=gardencentredb;host=localhost', 'root', 'root');
-    echo "try block" +$pdo;
+    $pdo = new PDO('mysql:dbname=gardencentredb;host=localhost', 'root');
     $result = $pdo->query('SELECT * FROM Orders');
     $rows = $result->fetchAll();
-    var_dump();
-    die();
+    var_dump($rows,1);
 }catch(PDOException $err){
     echo "Problem-cry". $err->getMessage();
     exit();
