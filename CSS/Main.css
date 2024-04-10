@@ -34,12 +34,12 @@ body{background-color: #c1fabc;}
 .Titles{
     margin: auto 40%;
 
-    border: 5px white;
+    /*border: 5px white;*/
 }
 
 .hrs{
     color: white;
-    height: 15px;
+    height: 5px;
     width: 75%;
-    border-top: 10px solid white;
+    /*border-top: 5px solid white;*/
 }
