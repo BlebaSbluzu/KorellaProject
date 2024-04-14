@@ -1,10 +1,16 @@
 #cardStyles{
     width:4rem;
     margin: 2rem;
-    background-color: red;
+    background-color: blue;
 }
-#cardRow{
+.cardRow{
     /*margin: auto 20rem;*/
-    width: 75%;
+    /*width: 75%;*/
     margin: 5rem auto;
+}
+.hrs{
+    color: white;
+    height: 5px;
+    width: 75%;
+    /*border-top: 5px solid white;*/
 }
