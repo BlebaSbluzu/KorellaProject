@@ -48,11 +48,15 @@ $statement = $connection->prepare($sql);
         <hr class="hrs">
         <h3 class="sacramento-regular"> <?php echo $title ?> </h3>
         <hr class="hrs"></div>
-<div id="cardRow" class="card-group cardRow">
+<div id="cardRow" class="card-group row">
     <?php
 
 //    for($i=0;$i<=$ItemsAmount;$i++) {
+    $rowRefresh = 0;
             foreach ($result as $product) {
+                $rowRefresh + 1;
+
+
 //                echo escape($product["image"]);
 //                $imageName = escape($product["image"]);
 //                echo $imageName;
@@ -62,7 +66,7 @@ $statement = $connection->prepare($sql);
 
 
 
-    <div id="cardStyles" class="card">
+    <div id="cardStyles" class="card col-sm-4 ">
 
 
         <img src="../Images/<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
@@ -77,6 +81,7 @@ $statement = $connection->prepare($sql);
 
 
 <?php
+
 
     }
 }
@@ -95,4 +100,4 @@ $statement = $connection->prepare($sql);
 //}
 
 ?>
-    </div>
+<!--    </div>-->

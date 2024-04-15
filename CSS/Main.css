@@ -1,4 +1,6 @@
-body{background-color: #c1fabc;}
+body{background-color: #c1fabc;
+    overflow-x: hidden;
+}
 .sacramento-regular {
     font-family: "Sacramento", cursive;
     font-weight: 600;
@@ -43,3 +45,9 @@ body{background-color: #c1fabc;}
     width: 75%;
     /*border-top: 5px solid white;*/
 }
+
+/*#productArea{*/
+/*    width: 75%;*/
+/*    margin: 2rem auto;*/
+
+/*}*/

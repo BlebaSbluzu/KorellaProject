@@ -56,19 +56,20 @@ require '../src/DBconnect.php';
     </button>
 </div>
 
+
+<!--    <div class="productArea container justify-content-center card-group cardRow">-->
+    <div id="cardRow" class=" cardRow ">
+
 <?php include "./ProductSet.php";
 require "../common.php";
 
 
 
-$homeRow1 = new ProductSet("Popular Items","Select * from Products limit 3;");
-$homeRow2 = new ProductSet("Popular Items","Select * from Products limit 3;");
-$homeRow3 = new ProductSet("Popular Items","Select * from Products limit 3;");
+$homeRow1 = new ProductSet("Popular Items","Select * from Products limit 4;");
 
 ?>
 
-
-
+</div>
 
 
 <!--<div class="Titles">-->
