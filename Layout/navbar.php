@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<a href=""><p>Login/Signup</p></a>
+<a id="loginButton" href=""><p>Login / Signup</p></a>
 <nav id="OverwriteNAV" class="navbar navbar-expand-lg ">
 
     <div class="container-fluid">
@@ -33,8 +33,15 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="../Pages/seasonal.php">Seasonal</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Shop</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" aria-current="page"
+                       href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Trees</a></li>
+                        <li><a class="dropdown-item" href="#">Shrubs</a></li>flowers vine
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Pots</a>

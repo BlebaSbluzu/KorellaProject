@@ -4,6 +4,7 @@
     background-color: #c1fabc;
     border: none;
     font-size: 1.5rem;
+    text-align: center;
 
 }
 
@@ -32,10 +33,15 @@ a:link{
     /*margin: auto 20rem;*/
     width: 75%;
     margin:  5rem auto;
+    text-align: left;
+
 }
 .hrs{
-    color: white;
-    height: 5px;
-    width: 75%;
-    /*border-top: 5px solid white;*/
+    color: #ffffff;
+    width: 15%;
+    border-top: 5px solid white;
+}
+
+.ProductSetTitle{
+    text-align: left;
 }

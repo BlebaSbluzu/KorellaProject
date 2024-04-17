@@ -34,16 +34,24 @@ body{background-color: #c1fabc;
 }
 
 .Titles{
-    margin: auto 40%;
+    margin: auto 2%;
 
+    border-top: 10px white;
     /*border: 5px white;*/
 }
 
-.hrs{
-    color: white;
-    height: 5px;
-    width: 75%;
+hr{
+    color: #ffffff;
+    width: 10%;
+    font-weight: bold;
     /*border-top: 5px solid white;*/
+}
+
+#loginButton{
+
+text-align: right;
+    color: black;
+
 }
 
 /*#productArea{*/

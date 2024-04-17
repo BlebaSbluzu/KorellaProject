@@ -51,7 +51,7 @@ $rowRefresh = 0;
 
     <div class="Titles">
         <hr class="hrs">
-        <h3 class="sacramento-regular"> <?php echo $title ?> </h3>
+        <h3 class="sacramento-regular ProductSetTitle"> <?php echo $title ?> </h3>
         <hr class="hrs"></div>
 <div id="cardRow" class="card-group row">
     <?php
@@ -79,9 +79,10 @@ $rowRefresh = 0;
         <div class="card-body">
             <p class="card-title"><?php echo $product["ProductName"] ?> <i class="pricetext">€<?php echo $product["Price"]; ?></i></p>
         </div>
-        <div class="card-footer">
-            <small class="text-muted"></small>
-        </div></a>
+<!--        <div class="card-footer">-->
+<!--            <small class="text-muted"></small>-->
+<!--        </div>-->
+       </a>
     </div>
 
 
