@@ -8,19 +8,19 @@ input {
     margin-bottom: 16px;
 }
 
-
+/* Style the submit button */
 input[type=submit] {
     background-color: #146c43;
     color: white;
 }
 
-
+/* Style the container for inputs */
 .container {
     background-color: #c1fabc;
     padding: 20px;
 }
 
-
+/* The message box is shown when the user clicks on the password field */
 #message {
     display:none;
     background: #c1fabc;
@@ -35,7 +35,7 @@ input[type=submit] {
     font-size: 18px;
 }
 
-/
+
 .valid {
     color: green;
 }
@@ -45,6 +45,7 @@ input[type=submit] {
     left: -35px;
     content: "&#10004;";
 }
+
 
 .invalid {
     color: red;

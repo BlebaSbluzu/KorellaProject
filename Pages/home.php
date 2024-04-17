@@ -1,4 +1,5 @@
 
+<?php require "../logout.php"; ?>
 <?php require "../Layout/navbar.php"; ?>
 
 <link rel="stylesheet" href="../CSS/Main.css" type="text/css">

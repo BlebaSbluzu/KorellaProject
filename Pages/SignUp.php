@@ -1,6 +1,6 @@
-<?php require "../Layout/navbar.php"; ?>
 
 <?php
+require "../Layout/navbar.php";
 if (isset($_POST['submit'])) {
     require "../common.php";
     try {
@@ -18,7 +18,9 @@ if (isset($_POST['submit'])) {
         $statement->execute($new_user);
 
         if ($statement) {
-            echo $new_user['username']. ' successfully added';
+
+            header("Location: login.php");
+            exit();
         }
 
     } catch(PDOException $error) {
@@ -42,7 +44,7 @@ if (isset($_POST['submit'])) {
                     <div class="card-body p-5">
                         <h2 class="text-uppercase text-center mb-5">Create an account</h2>
                         <div class="container">
-                            <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                            <form method="post" action="SignUp.php">
                                 <label for="username">Username</label>
                                 <input type="text" id="username" name="username" required>
 
@@ -54,7 +56,7 @@ if (isset($_POST['submit'])) {
                                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
 
-                                <input type="submit" name="submit" value="Submit">
+                                <input type="submit" name="submit" value="Submit" >
                             </form>
                         </div>
                     </div>

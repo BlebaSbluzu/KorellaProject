@@ -1,62 +1,75 @@
-<?php session_start(); ?>
-<?php require "../Layout/navbar.php"; ?>
 <?php
-require_once '../config.php';
-?>
-<?php require_once '../src/DBconnect.php';
-?>
-<?php
+session_start();
+require_once '../Layout/navbar.php';
+require_once '../src/DBconnect.php';
+require_once '../logout.php';
 
-if(isset($_POST['Submit']))
-{
+if(isset($_SESSION['Username'])) {
+    echo 'You are already logged in as ' . $_SESSION['Username'];
 
-    if( ($_POST['Username'] == $Username) && ($_POST['password'] ==
-            $password) )
-    {
-        echo 'Success';
+    exit;
+}
 
-        $_SESSION['Username'] = $Username;
+if(isset($_POST['Submit'])) {
+    $username = $_POST['Username'];
+    $password = $_POST['password'];
+
+
+    $sql = "SELECT * FROM users WHERE username = :username AND password = :password";
+    $statement = $connection->prepare($sql);
+    $statement->bindParam(':username', $username, PDO::PARAM_STR);
+    $statement->bindParam(':password', $password, PDO::PARAM_STR);
+
+    try {
+        $statement->execute();
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+
+        if($row) {
+            echo 'Success';
+            $_SESSION['Username'] = $username;
+
+        } else {
+            echo 'Incorrect Username or Password';
+        }
+    } catch (PDOException $e) {
+        echo 'Error: ' . $e->getMessage();
     }
-    else
-        echo 'Incorrect Username or Password';
 }
 ?>
 <html>
 
 <link rel="stylesheet" href="../CSS/Main.css" type="text/css">
 <link rel="stylesheet" href="../CSS/Products.css" type="text/css">
-<link rel="stylesheet" href="../CSS/SignUp.css" type="text/css">
+<link rel="stylesheet" href="../CSS/Login.css" type="text/css">
 
-
-<div class="mask d-flex align-items-center h-100 gradient-custom-3">
-    <div class="container h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                <div class="card" style="border-radius: 10px;">
-                    <div class="card-body p-5">
-                        <h1>Status: You are logged in <?php echo
-                            $_SESSION['Username'];?> </h1>
+<form method="post" action="Login.php">
+    <input type="submit" name="logout" value="Logout">
+</form>
 
                         <div class="container">
-                            <form action="Login.php">
+                            <?php if(isset($_SESSION['Username'])): ?>
+                                <h1>Status: You are logged in <?php echo $_SESSION['Username']; ?> </h1>
+                            <?php else: ?>
+                                <form action="Login.php" method="post">
+                                    <label for="Username">Username</label>
+                                    <input type="text" id="Username" name="Username" required>
 
-                                <label for="Username">Username</label>
-                                <input type="Username" id="Username" name="Username" required>
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" name="password"
+                                           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                           title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
 
-                                <label for="password">Password</label>
-                                <input type="password" id="password" name="password"
-                                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                                       title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-
-
-                                <input type="submit" value="Submit">
-
-                            </form>
+                                    <a href="seasonal.php">
+                                    <input type="submit" name="Submit" value="Submit">
+                                    </a>
+                                </form>
+                            <?php endif; ?>
                         </div>
-
-
                     </div>
                 </div>
-
+            </div>
+        </div>
+    </div>
+</div>
 
 </html>
