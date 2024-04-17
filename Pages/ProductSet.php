@@ -33,8 +33,13 @@ class ProductSet
 function MakeSet($title, $sql)
 {
 include '../src/DBconnect.php';
+$rowRefresh = 0;
 
-$statement = $connection->prepare($sql);
+        $statement = $connection->prepare($sql);
+
+//    I found fetchColumn() on the php.net documentation
+        $count = $statement->fetchColumn();
+        $remainder = 4-($count % 4);
         $statement->execute();
         $result = $statement->fetchAll();
     ?>
@@ -52,9 +57,10 @@ $statement = $connection->prepare($sql);
     <?php
 
 //    for($i=0;$i<=$ItemsAmount;$i++) {
-    $rowRefresh = 0;
             foreach ($result as $product) {
-                $rowRefresh + 1;
+                $rowRefresh ++;
+
+
 
 
 //                echo escape($product["image"]);
@@ -66,38 +72,53 @@ $statement = $connection->prepare($sql);
 
 
 
-    <div id="cardStyles" class="card col-sm-4 ">
+   <div id="cardStyles" class="card col-sm-4 sacramento-regular">
+       <a href="Product.php">
 
-
-        <img src="../Images/<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
+        <img id="ProductThumb" src="../Images/<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title"><?php echo $product["ProductName"]; ?></h5>
+            <p class="card-title"><?php echo $product["ProductName"] ?> <i class="pricetext">€<?php echo $product["Price"]; ?></i></p>
         </div>
         <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
+            <small class="text-muted"></small>
+        </div></a>
     </div>
 
 
 
 <?php
 
+if($rowRefresh == 4){
+    ?>
 
-    }
+    </div>
+
+<div id="cardRow" class="card-group row">
+
+
+    <?php
+
 }
 
+    }
 
-//public  function getSql() {
-//    return $this->sql;
-//}
-//    function __construct($title, $sql){
-//        $this->title = $title;
-//        $this->sql = $sql;
-//    }
-//public $statement = $connection->prepare($sql);
-//$statement->execute();
-//$result = $statement->fetchAll();
-//}
+    for($i=1;$i<$remainder;$i++){
+        ?>
 
+        <div id="cardStyles" class="card col-sm-4 ">
+        </div>
+
+        <?php
+
+    }
+
+     ?>
+</div>
+<?php
+    }
 ?>
-<!--    </div>-->
+
+
+
+
+

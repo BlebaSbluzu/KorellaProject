@@ -2,7 +2,32 @@
     width:100px;
     margin: 1rem ;
     background-color: #c1fabc;
+    border: none;
+    font-size: 1.5rem;
+
 }
+
+.pricetext{
+    font-size: 1.6rem;
+}
+
+a:link{
+    color: black;
+    text-decoration: none;
+}
+.card{
+    border: none;
+}
+.card-title{
+
+}
+
+#ProductThumb{
+
+
+
+}
+
 .cardRow{
     /*margin: auto 20rem;*/
     width: 75%;
