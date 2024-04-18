@@ -1,5 +1,4 @@
 <?php
-
 //try {
 //    $pdo = new PDO('mysql:dbname=gardencentredb;host=localhost', 'root');
 //    $result = $pdo->query('SELECT * FROM Orders');
@@ -10,7 +9,7 @@
 //    exit();
 //}
 
-require '../src/DBconnect.php';
+require '../Pages/src/DBconnect.php';
 ?>
 <?php require "../Layout/navbar.php"; ?>
 

@@ -1,6 +1,6 @@
 <?php
 //for database connection
-require_once '../config.php';
+require_once 'config.php';
 require "../Layout/navbar.php";
 ?>
 
@@ -28,7 +28,7 @@ require "../Layout/navbar.php";
         $connection = new PDO($dsn, $username, $password, $options);
 
         //SQL statement for Product data
-        $sql = "SELECT * FROM product WHERE ProductName = 'Japanese Cherry Blossom(Prunus serrulata)'";
+        $sql = "SELECT * FROM product WHERE ProductName = 'Japanese Cherry Blossom'";
         $statement = $connection->prepare($sql);
         $statement->execute();
 
