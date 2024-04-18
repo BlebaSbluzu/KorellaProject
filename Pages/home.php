@@ -65,7 +65,7 @@ require "../common.php";
 
 
 
-$homeRow1 = new ProductSet("Popular Items","Select * from Products limit 4;");
+$homeRow1 = new ProductSet("Popular Items","Select * from product limit 4;");
 
 ?>
 

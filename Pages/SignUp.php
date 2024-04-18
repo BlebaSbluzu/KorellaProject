@@ -1,16 +1,9 @@
-<?php require_once('../template/header.php'); ?>
-<?php
-require "../Layout/navbar.php";
+<?php include "../Layout/navbar.php"; ?>
+<?php require_once('../template/header.php');
 require "../common.php";
-require_once '../src/DBconnect.php';
-?>
-
-<?php
+require '../src/DBconnect.php';
 if (isset($_POST['submit'])) {
-
     try {
-
-
         $new_user = array(
             "username" => escape($_POST['username']),
             "password" => escape($_POST['password']),
@@ -21,19 +14,15 @@ if (isset($_POST['submit'])) {
             ":" . implode(", :", array_keys($new_user)));
         $statement = $connection->prepare($sql);
         $statement->execute($new_user);
-
         if ($statement) {
-
-            header("Location: Login.php");
+            header("location: home.php");
             exit;
         }
-
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
 }
 ?>
-
 <html>
 <head>
     <link rel="stylesheet" href="../CSS/Main.css" type="text/css">
