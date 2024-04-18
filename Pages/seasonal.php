@@ -10,10 +10,10 @@ include "./ProductSet.php";?>
 
 <?php
 
-$Spring = new ProductSet("Spring", "SELECT * from products where SEASON = 'Spring' ");
-$Summer = new ProductSet("Summer", "SELECT * from products where SEASON = 'Summer' ");
-$Autumn = new ProductSet("Autumn", "SELECT * from products where SEASON = 'Autumn' ");
-$Winter = new ProductSet("Winter", "SELECT * from products where SEASON = 'Winter' ");
+$Spring = new ProductSet("Spring", "SELECT * from product where SEASON = 'Spring' ");
+$Summer = new ProductSet("Summer", "SELECT * from product where SEASON = 'Summer' ");
+$Autumn = new ProductSet("Autumn", "SELECT * from product where SEASON = 'Autumn' ");
+$Winter = new ProductSet("Winter", "SELECT * from product where SEASON = 'Winter' ");
 
 ?>
 </div>
