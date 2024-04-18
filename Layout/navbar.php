@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-<a id="loginButton" href=""><p>Login / Signup</p></a>
+<a id="loginButton" href="signup.php"><p>Login / Signup</p></a>
 <nav id="OverwriteNAV" class="navbar navbar-expand-lg ">
     <div class="container-fluid">
         <a class="navbar-brand" href="../Pages/home.php">
