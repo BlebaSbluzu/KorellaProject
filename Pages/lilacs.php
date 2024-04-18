@@ -1,6 +1,6 @@
 <?php
 //for database connection
-require_once '../config.php';
+require_once 'config.php';
 require "../Layout/navbar.php";
 ?>
 
