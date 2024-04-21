@@ -1,13 +1,14 @@
 <?php include "../Layout/navbar.php"; ?>
 <?php require_once('../template/header.php');
 require "../common.php";
-require '../src/DBconnect.php';
+require 'src/DBconnect.php';
 if (isset($_POST['submit'])) {
     try {
         $new_user = array(
             "username" => escape($_POST['username']),
             "password" => escape($_POST['password']),
             "email" => escape($_POST['email']),
+            "date" => date("Y-m-d")
         );
         $sql = sprintf("INSERT INTO %s (%s) values (%s)", "users",
             implode(", ", array_keys($new_user)),

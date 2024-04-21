@@ -32,7 +32,7 @@ class ProductSet
 
 function MakeSet($title, $sql)
 {
-include '../src/DBconnect.php';
+include 'src/DBconnect.php';
 $rowRefresh = 0;
 
         $statement = $connection->prepare($sql);
