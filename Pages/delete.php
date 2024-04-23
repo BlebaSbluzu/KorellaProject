@@ -1,4 +1,5 @@
 <?php
+require_once "../Layout/navbaradmin.php";
 require "../config.php";
 require_once '../src/DBconnect.php';
 

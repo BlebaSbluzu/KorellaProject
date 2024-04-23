@@ -2,6 +2,15 @@
 <?php require_once('../template/header.php');
 require "../common.php";
 require '../src/DBconnect.php';
+
+
+
+if (isset($_SESSION['Username'])) {
+        echo 'You are already logged in as ' . $_SESSION['Username'];
+        exit;
+
+}
+
 if (isset($_POST['submit'])) {
     try {
         $new_user = array(
@@ -16,7 +25,7 @@ if (isset($_POST['submit'])) {
         $statement = $connection->prepare($sql);
         $statement->execute($new_user);
         if ($statement) {
-            header("location: home.php");
+            header("location: Login.php");
             exit;
         }
     } catch(PDOException $error) {

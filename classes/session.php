@@ -22,7 +22,7 @@ class session
     public function forgetSession()
     {
         $this->killSession();
-        header("location:Login.php"); /* Redirect to login page */
+        header("location:../Pages/Login.php");
         exit;
     }
 }
