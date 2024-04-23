@@ -1,33 +1,46 @@
 <?php include '../Layout/navbar.php'; ?>
 <?php require_once('../template/header.php');
 require '../src/DBconnect.php';
-    if (isset($_SESSION['Username'])) {
-        echo 'You are already logged in as ' . $_SESSION['Username'];
-        exit;
-    }
-    if (isset($_POST['Submit'])) {
-        $username = $_POST['Username'];
-        $password = $_POST['password'];
-        $sql = "SELECT * FROM users WHERE username = :username AND password = :password";
-        $statement = $connection->prepare($sql);
-        $statement->bindParam(':username', $username, PDO::PARAM_STR);
-        $statement->bindParam(':password', $password, PDO::PARAM_STR);
-        try {
-            $statement->execute();
-            $row = $statement->fetch(PDO::FETCH_ASSOC);
-            if ($row) {
-                echo 'Success';
-                $_SESSION['Username'] = $username;
-                $_SESSION['Active'] = true;
-                header("location:home.php");
-                exit;
+
+if (isset($_SESSION['Username'])) {
+    echo 'You are already logged in as ' . $_SESSION['Username'];
+    exit;
+}
+if (isset($_POST['Submit'])) {
+    $username = $_POST['Username'];
+    $password = $_POST['password'];
+
+
+    $sql = "SELECT * FROM users WHERE username = :username AND password = :password";
+    $statement = $connection->prepare($sql);
+    $statement->bindParam(':username', $username, PDO::PARAM_STR);
+    $statement->bindParam(':password', $password, PDO::PARAM_STR);
+
+    try {
+        $statement->execute();
+        $user_data = $statement->fetch(PDO::FETCH_ASSOC);
+
+
+        if ($user_data) {
+
+            $_SESSION['Username'] = $username;
+            $_SESSION['Active'] = true;
+            $_SESSION['is_admin'] = ($user_data['username'] === 'admin');
+
+
+            if ($_SESSION['is_admin']) {
+                header("Location: admin.php");
             } else {
-                echo 'Incorrect Username or Password';
+                header("Location: home.php");
             }
-        } catch (PDOException $e) {
-            echo 'Error: ' . $e->getMessage();
+            exit;
+        } else {
+            echo 'Incorrect Username or Password';
         }
+    } catch (PDOException $e) {
+        echo 'Error: ' . $e->getMessage();
     }
+}
 ?>
 <html>
 
