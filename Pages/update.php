@@ -49,7 +49,7 @@ try {
             <td><?php echo htmlspecialchars($row["PestDisease"]); ?></td>
             <td><?php echo htmlspecialchars($row["image"]); ?></td>
             <td><?php echo htmlspecialchars($row["imageDiagram"]); ?></td>
-            <td><a href="edit_user.php?id=<?php echo $row['ProductName']; ?>">Edit</a></td>
+            <td><a href="editproducts.php?id=<?php echo $row['ProductName']; ?>">Edit</a></td>
         </tr>
     <?php endforeach; ?>
     </tbody>
