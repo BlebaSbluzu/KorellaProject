@@ -1,4 +1,6 @@
 <?php
+require_once "../Layout/navbaradmin.php";
+
 if (isset($_POST['submit'])) {
     require "../common.php";
     try {

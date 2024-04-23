@@ -3,6 +3,7 @@
 <?php require_once('../template/header.php');
 require '../src/DBconnect.php';
 
+
 if (isset($_SESSION['Username'])) {
     echo 'You are already logged in as ' . $_SESSION['Username'];
     exit;
@@ -51,9 +52,6 @@ if (isset($_POST['Submit'])) {
 <link rel="stylesheet" href="../CSS/Products.css" type="text/css">
 <link rel="stylesheet" href="../CSS/Login.css" type="text/css">
 
-<form method="post" action="Login.php">
-    <input type="submit" name="logout" value="Logout">
-</form>
 
                         <div class="container">
 
@@ -69,6 +67,7 @@ if (isset($_POST['Submit'])) {
                                     <a href="seasonal.php">
                                     <input type="submit" name="Submit" value="Submit">
                                     </a>
+                                    <p>Dont have a account? <a href="SignUp.php"><u>Click here</u></a></p>
                                 </form>
 
                         </div>

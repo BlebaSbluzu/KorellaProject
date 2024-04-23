@@ -15,34 +15,17 @@
 
 
 <a
-        <?php
-
+    <?php
         if (isset($_SESSION['Username'])) {
-            echo 'You are already logged in as ' . $_SESSION['Username'];
-//            exit;
-//        }
 
+    header('Location: home.php');
+    exit;
+
+} else {
+
+echo '<a id="loginButton" href="../Pages/Login.php"><p>Login/Signup</p></a>';
+}
         ?>
-
-
-            <button>
-
-                Welcome <?php echo $_SESSION['Username']?>
-
-            </button>
-
-    <?php
-    }
-    else{
-
-
-    ?>
-        id="loginButton" href="signup.php"><p>Login / Signup</p>
-
-    <?php
-    }
-    ?>
-
 </a>
 
 
@@ -70,21 +53,12 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Pots</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Trees</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Flowers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Shrubs and More</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Shopping Cart</a>
                 </li>
             </ul>
+            <form action="../classes/logout.php" method="post" name="Logout_Form" class="form-signin">
+                <button name="Submit" value="Logout" class="button" type="submit">Log out</button>
+            </form>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i>Search</button>

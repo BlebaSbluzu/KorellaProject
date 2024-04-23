@@ -1,3 +1,10 @@
+<?php
+require_once "../Layout/navbaradmin.php";
+require_once('../template/header.php');
+require '../src/DBconnect.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,14 +13,11 @@
     <title>Admin Panel</title>
 </head>
 <body>
-<h2>Welcome, <?php echo "Administrator" ?>!</h2>
-<ul>
-    <li><a href="create.php">Create User</a></li>
-    <li><a href="read.php">Find User</a></li>
-    <li><a href="update.php">Change Product</a></li>
-    <li><a href="delete.php">Delete User</a></li>
-    <li><a href="logout.php">Logout</a></li>
-</ul>
 </body>
+<div class="mainarea">
+    <h1>Status: You are logged in <?php echo $_SESSION['Username'] = $username;?> </h1>
 
+
+
+</div>
 </html>
