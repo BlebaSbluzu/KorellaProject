@@ -1,7 +1,7 @@
 <?php include "../Layout/navbar.php"; ?>
 <?php require_once('../template/header.php');
 require "../common.php";
-require 'src/DBconnect.php';
+require '../src/DBconnect.php';
 if (isset($_POST['submit'])) {
     try {
         $new_user = array(
@@ -53,8 +53,11 @@ if (isset($_POST['submit'])) {
 
                                 <input type="submit" name="submit" value="Submit" >
                             </form>
+
+                            <p>Already have an account? <a href="Login.php"><u>Click here</u></a></p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

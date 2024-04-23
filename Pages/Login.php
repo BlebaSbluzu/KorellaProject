@@ -1,10 +1,10 @@
-<?php include '../Layout/navbar.php'; ?>
-<?php require_once('../template/header.php');
-require '../src/DBconnect.php';
-    if (isset($_SESSION['Username'])) {
-        echo 'You are already logged in as ' . $_SESSION['Username'];
-        exit;
-    }
+<?php include '../Layout/navbar.php';
+require_once('../template/header.php');
+include '../src/DBconnect.php';
+//    if (isset($_SESSION['Username'])) {
+//        echo 'You are already logged in as ' . $_SESSION['Username'];
+//        exit;
+//    }
     if (isset($_POST['Submit'])) {
         $username = $_POST['Username'];
         $password = $_POST['password'];

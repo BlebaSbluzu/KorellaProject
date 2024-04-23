@@ -5,7 +5,40 @@
     border: none;
     font-size: 1.5rem;
     text-align: center;
+    position: relative;
+}
 
+#cardStyles:hover{
+    transform:scale(1.05);
+}
+
+/*Stack overflow mixed with past experience with link styling indicated that pseudo classes would be a good idea here*/
+#cardStyles:hover #productBtn{
+    display: inline-block;
+}
+
+#productBtn:active{
+    background-color:#8b948e ;
+}
+
+#productBtn:hover{
+    background-color: #b1c4b7;
+}
+
+ #productBtn {
+    display: none;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background: none;
+    color: white;
+    /*font-size: 20px;*/
+    padding: 5px 24px;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .pricetext{
@@ -23,19 +56,13 @@ a:link{
 
 }
 
-#ProductThumb{
-
-
-
-}
-
 .cardRow{
     /*margin: auto 20rem;*/
     width: 75%;
     margin:  5rem auto;
     text-align: left;
-
 }
+
 .hrs{
     color: #ffffff;
     width: 15%;
