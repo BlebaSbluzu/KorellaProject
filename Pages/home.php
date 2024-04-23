@@ -1,18 +1,5 @@
 <?php
-
-//try {
-//    $pdo = new PDO('mysql:dbname=gardencentredb;host=localhost', 'root');
-//    $result = $pdo->query('SELECT * FROM Orders');
-//    $rows = $result->fetchAll();
-//    var_dump($rows,1);
-//}catch(PDOException $err){
-//    echo "Problem-cry". $err->getMessage();
-//    exit();
-//}
-
-require '../src/DBconnect.php';
-?>
-<?php require "../Layout/navbar.php"; ?>
+require "../Layout/navbar.php"; ?>
 
 <link rel="stylesheet" href="../CSS/Main.css" type="text/css">
 <link rel="stylesheet" href="../CSS/Home.css" type="text/css">

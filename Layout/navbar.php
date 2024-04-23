@@ -12,7 +12,40 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-<a id="loginButton" href=""><p>Login / Signup</p></a>
+
+
+<a
+        <?php
+
+        if (isset($_SESSION['Username'])) {
+            echo 'You are already logged in as ' . $_SESSION['Username'];
+//            exit;
+//        }
+
+        ?>
+
+
+            <button>
+
+                Welcome <?php echo $_SESSION['Username']?>
+
+            </button>
+
+    <?php
+    }
+    else{
+
+
+    ?>
+        id="loginButton" href="signup.php"><p>Login / Signup</p>
+
+    <?php
+    }
+    ?>
+
+</a>
+
+
 <nav id="OverwriteNAV" class="navbar navbar-expand-lg ">
     <div class="container-fluid">
         <a class="navbar-brand" href="../Pages/home.php">

@@ -8,6 +8,7 @@ if (isset($_POST['submit'])) {
             "username" => escape($_POST['username']),
             "password" => escape($_POST['password']),
             "email" => escape($_POST['email']),
+            "date" => date("Y-m-d")
         );
         $sql = sprintf("INSERT INTO %s (%s) values (%s)", "users",
             implode(", ", array_keys($new_user)),
@@ -52,8 +53,11 @@ if (isset($_POST['submit'])) {
 
                                 <input type="submit" name="submit" value="Submit" >
                             </form>
+
+                            <p>Already have an account? <a href="Login.php"><u>Click here</u></a></p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

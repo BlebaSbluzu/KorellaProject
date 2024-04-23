@@ -1,6 +1,6 @@
 <?php
 //for database connection
-require_once '../config.php';
+require_once 'config.php';
 require "../Layout/navbar.php";
 ?>
 
@@ -45,7 +45,7 @@ require "../Layout/navbar.php";
         } else {
             echo "Product not found.";
         }
-    } catch (\PDOException $e) {
+        } catch (\PDOException $e) {
         //if it doesn't connect
         echo "Connection failed: " . $e->getMessage();
     }

@@ -1,3 +1,4 @@
+
 <?php include '../Layout/navbar.php'; ?>
 <?php require_once('../template/header.php');
 require '../src/DBconnect.php';
@@ -30,6 +31,8 @@ if (isset($_POST['Submit'])) {
 
             if ($_SESSION['is_admin']) {
                 header("Location: admin.php");
+
+
             } else {
                 header("Location: home.php");
             }

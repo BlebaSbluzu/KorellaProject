@@ -76,6 +76,7 @@ $rowRefresh = 0;
        <a href="Product.php">
 
         <img id="ProductThumb" src="../Images/<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
+           <button id="productBtn" >Add to Cart</button>
         <div class="card-body">
             <p class="card-title"><?php echo $product["ProductName"] ?> <i class="pricetext">€<?php echo $product["Price"]; ?></i></p>
         </div>
