@@ -1,8 +1,6 @@
 <?php
 
-use classes\session;
+include ('../template/header.php');
 
-require_once 'session.php';
-    $session = new session();
-    $session->forgetSession();
+$session->forgetSession();
 ?>

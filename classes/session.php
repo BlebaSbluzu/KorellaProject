@@ -16,6 +16,15 @@ class session
                 $params['secure'], $params['httponly']
             );
         }
+
+
+        ?>
+
+        <script>
+            alert("Your session has timed out. Please Log Back in")
+        </script>
+
+<?php
         session_destroy();
     }
 

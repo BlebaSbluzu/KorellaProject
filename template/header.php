@@ -1,5 +1,17 @@
 <?php
+
+
 session_start();
+
+//use classes\session;
+//$session = new session();
+
+use classes\session;
+
+require_once '../classes/session.php';
+$session = new session();
+//$session->killSession();
+
 if($_SESSION['Active'] = false){ /* Redirects user to Login.php if
 not logged in. Remember, we set $_SESSION['Active'] == true in
 login.php*/

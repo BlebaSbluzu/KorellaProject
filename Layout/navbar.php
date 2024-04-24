@@ -14,19 +14,48 @@
 <body>
 
 
-<a
+<div id="accountButton">
     <?php
+
+    require_once('../template/header.php');
+//    echo '<p>'; print_r($_SESSION); echo '</p>';
+
         if (isset($_SESSION['Username'])) {
+            ?>
 
-    header('Location: home.php');
-    exit;
+<a id="MyAccountBtn" href="../Pages/Account.php">
 
+    <p>Welcome <B><?php echo $_SESSION['Username'] ?></B> </p>
+
+
+    <form action="../classes/logout.php" method="post" name="Logout_Form" class="form-signin">
+        <button name="Submit" value="Logout" class="button" type="submit">Log out</button>
+    </form>
+
+</a>';
+
+<?php
 } else {
 
-echo '<a id="loginButton" href="../Pages/Login.php"><p>Login/Signup</p></a>';
+echo '
+
+<a id="loginButton" href="../Pages/Login.php">
+
+<p>Login</p>
+
+</a>
+
+<p>Don\'t have an account?</p>
+    
+<a id="loginButton" href="../Pages/SignUp.php">
+
+<p>Signup</p>
+
+</a>';
+
 }
         ?>
-</a>
+</div>
 
 
 <nav id="OverwriteNAV" class="navbar navbar-expand-lg ">
@@ -52,20 +81,45 @@ echo '<a id="loginButton" href="../Pages/Login.php"><p>Login/Signup</p></a>';
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>
+                <?php
+
+                if (isset($_SESSION['Username'])  && !$_SESSION['is_admin']) {
+                ?>
+
+
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Shopping Cart</a>
                 </li>
+
+
+                <?php
+
+                }
+//                else if($_SESSION['is_admin']){
+//
+//                    echo " admin";
+//                }
+                ?>
+
             </ul>
-            <form action="../classes/logout.php" method="post" name="Logout_Form" class="form-signin">
-                <button name="Submit" value="Logout" class="button" type="submit">Log out</button>
-            </form>
+
+
+
+
+
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i>Search</button>
             </form>
+
+
+
+
         </div>
     </div>
 </nav>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="index.js"></script>
 </body>
