@@ -16,7 +16,8 @@ input[type=submit] {
 
 /* Style the container for inputs */
 .container {
-    background-color: #c1fabc;
+    margin-top: 3% ;
+    background-color: #9bfa93;
     padding: 20px;
 }
 

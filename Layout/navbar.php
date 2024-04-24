@@ -14,7 +14,10 @@
 <body>
 
 
+
+
 <div id="accountButton">
+
     <?php
 
     require_once('../template/header.php');
@@ -32,26 +35,33 @@
         <button name="Submit" value="Logout" class="button" type="submit">Log out</button>
     </form>
 
-</a>';
+</a>
 
 <?php
-} else {
 
-echo '
 
-<a id="loginButton" href="../Pages/Login.php">
+//found $_SERVER['PHP_SELF'] superglobal variable on php site as well as the basename function which returns the "trailing name component of path"
+} else if(basename($_SERVER['PHP_SELF']) != 'Login.php' && basename($_SERVER['PHP_SELF']) != 'SignUp.php'){
 
-<p>Login</p>
+?>
+
+        <div id="logsignbox">
+<a href="../Pages/Login.php">
+
+<p class="signinBtns">Login</p>
 
 </a>
 
-<p>Don\'t have an account?</p>
-    
-<a id="loginButton" href="../Pages/SignUp.php">
+<p class="signinBtns">Don't have an account?</p>
 
-<p>Signup</p>
+<a href="../Pages/SignUp.php">
 
-</a>';
+Sign up here!
+
+</a>
+        </div>
+
+            <?php
 
 }
         ?>
@@ -82,8 +92,11 @@ echo '
                     </ul>
                 </li>
                 <?php
+                if (isset($_SESSION['Username'])){
 
-                if (isset($_SESSION['Username'])  && !$_SESSION['is_admin']) {
+
+
+                if (!$_SESSION['is_admin']) {
                 ?>
 
 
@@ -95,7 +108,7 @@ echo '
                 <?php
 
                 }
-                else if($_SESSION['is_admin']==1){
+                else if($_SESSION['Username'] == "admin"){
 
                 ?>
 
@@ -116,7 +129,11 @@ echo '
                     </li>
 
 
-                <?php } ?>
+                <?php }
+
+
+
+                }?>
             </ul>
 
 
