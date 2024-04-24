@@ -99,7 +99,7 @@ if($rowRefresh == 4){
 
 
     <?php
-
+    $rowRefresh =0;
 }
 
     }

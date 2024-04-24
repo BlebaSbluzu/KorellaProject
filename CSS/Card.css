@@ -12,6 +12,12 @@
     transform:scale(1.05);
 }
 
+#ProductThumb{
+
+    width: 250px;
+    height: 250px;
+}
+
 /*Stack overflow mixed with past experience with link styling indicated that pseudo classes would be a good idea here*/
 #cardStyles:hover #productBtn{
     display: inline-block;
