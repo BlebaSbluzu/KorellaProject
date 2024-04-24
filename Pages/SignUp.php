@@ -2,36 +2,12 @@
 <?php require_once('../template/header.php');
 require "../common.php";
 require '../src/DBconnect.php';
+require_once 'UserAuth.php';
 
 
-
-if (isset($_SESSION['Username'])) {
-        echo 'You are already logged in as ' . $_SESSION['Username'];
-        exit;
-
-}
-
-if (isset($_POST['submit'])) {
-    try {
-        $new_user = array(
-            "username" => escape($_POST['username']),
-            "password" => escape($_POST['password']),
-            "email" => escape($_POST['email']),
-            "date" => date("Y-m-d")
-        );
-        $sql = sprintf("INSERT INTO %s (%s) values (%s)", "users",
-            implode(", ", array_keys($new_user)),
-            ":" . implode(", :", array_keys($new_user)));
-        $statement = $connection->prepare($sql);
-        $statement->execute($new_user);
-        if ($statement) {
-            header("location: Login.php");
-            exit;
-        }
-    } catch(PDOException $error) {
-        echo $sql . "<br>" . $error->getMessage();
-    }
-}
+$userAuth = new UserAuth($connection);
+$userAuth->checkLoggedIn();
+$userAuth->registerUser();
 ?>
 <html>
 <head>
