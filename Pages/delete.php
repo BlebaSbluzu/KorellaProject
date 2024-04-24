@@ -1,5 +1,5 @@
 <?php
-require_once "../Layout/navbaradmin.php";
+require_once "../Layout/navbar.php";
 require "../config.php";
 require_once '../src/DBconnect.php';
 

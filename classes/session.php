@@ -18,20 +18,14 @@ class session
         }
 
 
-        ?>
 
-        <script>
-            alert("Your session has timed out. Please Log Back in")
-        </script>
-
-<?php
         session_destroy();
     }
 
     public function forgetSession()
     {
         $this->killSession();
-        header("location:../Pages/Login.php");
+        header("location:../Pages/home.php");
         exit;
     }
 }

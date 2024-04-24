@@ -95,12 +95,28 @@ echo '
                 <?php
 
                 }
-//                else if($_SESSION['is_admin']){
-//
-//                    echo " admin";
-//                }
+                else if($_SESSION['is_admin']==1){
+
                 ?>
 
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Pages/create.php">Create User</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Pages/read.php">Find User</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Pages/update.php">Change Product</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Pages/delete.php">Delete User</a>
+                    </li>
+
+
+                <?php } ?>
             </ul>
 
 

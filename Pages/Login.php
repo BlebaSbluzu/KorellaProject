@@ -51,12 +51,12 @@ if (isset($_POST['Submit'])) {
                 $_SESSION['Active'] = true;
                 $_SESSION['is_admin'] = ($user_data['username'] === 'admin');
 
-                if ($_SESSION['is_admin']) {
-                    header("Location: admin.php");
-                } else {
+//                if ($_SESSION['is_admin']) {
+//                    header("Location: admin.php");
+//                } else {
                     header("Location: home.php");
-                }
-                exit;
+//                }
+//                exit;
             } else {
                 echo 'Incorrect Username or Password';
             }
