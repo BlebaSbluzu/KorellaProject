@@ -60,13 +60,44 @@ hr{
 .signinBtns{
 
    margin-right: 5%;
-    line-height: 15px;
+    line-height: 80%;
+    vertical-align: bottom
+}
+a:link{
+    color:green;
+}
+
+a:hover{
+    color: darkgreen;
+}
+
+#signupbtn{
+    padding: 100px;
+}
+
+#signupbtn:link{
+    color:green;
 }
 
 #logsignbox{
 
     margin: 5%;
     text-align: center;
+    font-size: 5%;
 
+}
+#WelcomeText{
+
+font-size: 140% ;
+    margin: 5%;
+
+}
+#nameText{
+    font-size: 140%;
+    line-height: 0
+}
+#nameText:hover{
+
+    color:DarkGreen;
 
 }

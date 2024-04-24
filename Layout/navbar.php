@@ -28,11 +28,11 @@
 
 <a id="MyAccountBtn" href="../Pages/Account.php">
 
-    <p>Welcome <B><?php echo $_SESSION['Username'] ?></B> </p>
+    <p class="sacramento-regular" id="WelcomeText">Welcome <u id="nameText"><B><?php echo $_SESSION['Username'] ?></B></u> </p>
 
 
     <form action="../classes/logout.php" method="post" name="Logout_Form" class="form-signin">
-        <button name="Submit" value="Logout" class="button" type="submit">Log out</button>
+        <button id="LogoutButton" name="Submit" value="Logout" class="button btn btn-danger" type="submit">Log out</button>
     </form>
 
 </a>
@@ -40,24 +40,24 @@
 <?php
 
 
-//found $_SERVER['PHP_SELF'] superglobal variable on php site as well as the basename function which returns the "trailing name component of path"
+//found $_SERVER['PHP_SELF'] variable on php site as well as the basename function which returns the "trailing name component of path"
 } else if(basename($_SERVER['PHP_SELF']) != 'Login.php' && basename($_SERVER['PHP_SELF']) != 'SignUp.php'){
 
 ?>
-
         <div id="logsignbox">
-<a href="../Pages/Login.php">
+<a id="loginbtn" class="linkStyle" href="../Pages/Login.php">
 
-<p class="signinBtns">Login</p>
+<p class="signinBtns sacramento-regular">Login</p>
 
 </a>
 
-<p class="signinBtns">Don't have an account?</p>
+<p class="signinBtns sacramento-regular">Don't have an account?</p>
 
-<a href="../Pages/SignUp.php">
-
+<a id="signupbtn " class="linkStyle sacramento-regular" href="../Pages/SignUp.php">
+<p>
 Sign up here!
-
+    <br>
+</p>
 </a>
         </div>
 
@@ -154,6 +154,6 @@ Sign up here!
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="index.js"></script>
+<!--<script src="index.js"></script>-->
 </body>
 </html>
