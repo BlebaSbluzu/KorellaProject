@@ -36,7 +36,7 @@ $backgroundImage = strtolower($season) . "-header.jpg";
 <link rel="stylesheet" href="../CSS/Main.css" type="text/css">
 <link rel="stylesheet" href="../CSS/seasonal.css" type="text/css">
 
-//current season will be printed
+<!--current season will be printed-->
 <div id="cardRow" class=" cardRow ">
     <div class="season-greeting">
         <h1 >It's <?= htmlspecialchars($season)?>!</h1>
