@@ -85,12 +85,26 @@ Sign up here!
                     <a class="nav-link active dropdown-toggle" aria-current="page"
                        href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Trees</a></li>
+                       <!-- <li><a class="dropdown-item" href="#">Trees</a></li>
                         <li><a class="dropdown-item" href="#">Shrubs</a></li>flowers vine
+                        -->
+                        <li><a class="dropdown-item" href="../Pages/shop.php?category=Trees">Trees</a></li>
+                        <li><a class="dropdown-item" href="../Pages/shop.php?category=Shrubs">Shrubs</a></li>
+                        <li><a class="dropdown-item" href="../Pages/shop.php?category=Flowers">Flowers</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
+
                     </ul>
                 </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i>Search</button>
+            </form>
+
+
+        </div>
+    </div>
                 <?php
                 if (isset($_SESSION['Username'])){
 
