@@ -96,15 +96,11 @@ Sign up here!
 
                     </ul>
                 </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i>Search</button>
-            </form>
 
 
-        </div>
-    </div>
+
+
+
                 <?php
                 if (isset($_SESSION['Username'])){
 
@@ -152,12 +148,15 @@ Sign up here!
 
 
 
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i>Search</button>
+        </form>
 
-
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i>Search</button>
-            </form>
+<!--            <form class="d-flex" role="search">-->
+<!--                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--                <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i>Search</button>-->
+<!--            </form>-->
 
 
 
