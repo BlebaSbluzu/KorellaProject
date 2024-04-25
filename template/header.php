@@ -7,10 +7,53 @@ session_start();
 //$session = new session();
 
 use classes\session;
-
 require_once '../classes/session.php';
+require_once '../classes/Cart.php';
+
 $session = new session();
+$Cart = new Cart();
 //$session->killSession();
+
+
+
+$action = filter_input(INPUT_GET, 'action');
+switch ($action){
+
+ case 'cart':
+    displayCart();
+    break;
+    case 'addToCart':
+    $id = filter_input(INPUT_GET, 'id');
+    $quantity = filter_input(INPUT_GET, 'quantity');
+
+    addItem($id,$quantity);
+
+    displayCart();
+    break;
+
+     case 'removeFromCart':
+    $id = filter_input(INPUT_GET, 'id');
+    removeItemFromCart($id);
+    displayCart();
+    break;
+
+    case 'changeCartQuantity':
+    $id = filter_input(INPUT_GET, 'id');
+    $amount = filter_input(INPUT_POST, 'amount');
+    if($amount == 'increase'){
+        increaseCartQuantity($id);
+    } else {
+        reduceCartQuantity($id);
+    }
+    displayCart();
+    break;
+
+
+}
+
+
+
+
 
 if($_SESSION['Active'] = false){ /* Redirects user to Login.php if
 not logged in. Remember, we set $_SESSION['Active'] == true in

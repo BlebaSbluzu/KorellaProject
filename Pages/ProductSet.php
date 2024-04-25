@@ -7,15 +7,11 @@ class ProductSet
     public $sql;
     public $ItemsAmount;
 
-    /**
-     * @param $title
-     * @param $sql
-     * @param $ItemsAmount
-     */
     public function __construct($title, $sql)
     {
         $this->title = $title;
         $this->sql = $sql;
+
 
 
         MakeSet($title, $sql);
@@ -71,12 +67,16 @@ $rowRefresh = 0;
 <!--                src="/images/--><?php //echo $cutePet['image']; ?><!--"-->
 
 
-
    <div id="cardStyles" class="card col-sm-4 sacramento-regular">
-       <a href="Product.php">
+       <input type="hidden" name="ProductID" value="<?php $product["productID"]?>"/>
+       <a href="Product.php?param=<?php echo $product["productID"] ?>">;
+
+
 
         <img id="ProductThumb" src="../Images/<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
-           <button id="productBtn" >Add to Cart</button>
+
+           <button onclick="" id="productBtn" >Add to Cart</button>
+
         <div class="card-body">
             <p class="card-title"><?php echo $product["ProductName"] ?> <i class="pricetext">€<?php echo $product["Price"]; ?></i></p>
         </div>
@@ -85,7 +85,6 @@ $rowRefresh = 0;
 <!--        </div>-->
        </a>
     </div>
-
 
 
 <?php
@@ -114,11 +113,47 @@ if($rowRefresh == 4){
 
     }
 
+    require_once '../classes/Cart.php';
+    require_once ('../template/header.php');
      ?>
 </div>
+
+<!--    <script>-->
+<!---->
+<!--        function addToCart(item) {-->
+<!--        }-->
+<!---->
+<!--    </script>-->
+
+
 <?php
     }
+
+
+
+//if (isset($_GET['item']) && isset($_GET['quantity'])) {
+//    $item = $_GET['item'];
+//    $quantity = $_GET['quantity'];
+
+
+
+//    header('Location: currentPage');
+//    exit;
+//}
+//
+//
+//if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) ){
+//    if (isset($_POST['item']) && isset($_POST['quantity'])) {
+//        $item = $_POST['ProductID'];
+//
+//        $quantity = null;
+//        $Cart->additem($item, $quantity);
+//    }
+//}
+//
+
 ?>
+
 
 
 

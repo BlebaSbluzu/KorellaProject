@@ -3,6 +3,79 @@
     overflow: hidden;
 }
 
+/*Bellas styles for product page */
+#ProductPage{
+
+    margin: 5%;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+#ProductPageImg{
+    width: 18em;
+    height: 18em;
+}
+.quantitybtns{
+
+    width: 2em;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+
+}
+
+.addminus{
+    background-color: slategray;
+    font-size: 1.2em;
+    padding: 0;
+}
+
+#CartBtn{
+
+    margin-left: 2em;
+    background-color: orangered;
+    font-weight: bold;
+
+}
+.Productlabel{
+    color: darkgreen;
+    font-size: larger;
+    font-weight: bold;
+}
+
+#sizingDiv{
+    margin: 5% 15% 0 0 ;
+}
+
+#imageSection{
+    width: 30%;
+    float: left;
+    text-align: center;
+    flex: 1;
+}
+#NameSection{
+    width: 50%;
+    float: right;
+    flex: 1;
+}
+
+/*.inline{*/
+/*    display: inline;*/
+/*}*/
+
+
+
 .product-image {
     float: left;
     margin-right: 20px;
