@@ -43,14 +43,14 @@ if (isset($_GET['param'])) {
 
                 <h2 class="Productlabel"><?php echo $row['ProductName']; ?></h2>
                 <p><b>Description:</b> <?php echo $row['Description']; ?></p>
-
+                <form method="post" action="/?action=addToCart&id=<?=$row['productID']?>&quantity=quantity" style="display: inline">
                 <button class="quantitybtns addminus" type="button" onclick="decreaseQuantity()">-</button>
                 <input class="quantitybtns" type="number" name="quantity" id="quantity" class="quantity" value="1" min="1">
                 <button class="quantitybtns addminus" type="button" onclick="increaseQuantity()">+</button>
 
 
                 <button id="CartBtn">Add to Cart</button>
-
+                </form>
 
                 <div id="sizingDiv">
                 <h2 class="Productlabel">Sizing Information</h2>
