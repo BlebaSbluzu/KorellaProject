@@ -1,10 +1,4 @@
 
-h2 {
-    font-family: "Sacramento", cursive;
-    color: #ffc720;
-    font-size: 55px;
-}
-
 h3 {
     color: #0f5132;
     font-family: "Sacramento", cursive;
@@ -50,7 +44,45 @@ h6{
     text-align: center;
 }
 
-.text h1 {
-    font-size: 25px;
-    font-family: "Agency FB";
+
+
+
+.product-image {
+    float: left;
+    margin-right: 20px;
+    width: 500px;
+    height: 500px;
 }
+
+
+.cardRow {
+    display: flex; /*flexbox created to allign images and texts while creating a user friendly layout*/
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    background-size: cover;
+    text-align: center;
+    padding: 50px 20px;
+    overflow: hidden;
+}
+
+.season-greeting h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    color: darkcyan; /* A color that matches all seasons themes */
+    text-shadow: 2px 2px 2px #000000;
+    margin: 0; /* need flexbox to centre the text */
+    display: inline-block;
+    white-space: nowrap;
+    animation: slideIn 6s linear infinite; /*speed of the text while being in an infinite loop*/
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);/*starts on the left*/
+    }
+    to {
+        transform: translateX(100%);/*ends on the right*/
+    }
+}
+
