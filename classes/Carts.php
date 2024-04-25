@@ -1,9 +1,9 @@
 <?php
 
 
-class Cart
+class Carts
 {
-public $CartItems = [];
+public $CartItems = array();
     public function additem($newItem,$quantity)
     {
 

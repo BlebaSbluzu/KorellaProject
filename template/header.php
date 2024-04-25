@@ -8,48 +8,68 @@ session_start();
 
 use classes\session;
 require_once '../classes/session.php';
-require_once '../classes/Cart.php';
+require '../classes/Carts.php';
 
 $session = new session();
-$Cart = new Cart();
+$Cart = new Carts();
 //$session->killSession();
 
+if (isset($_POST['product_id'], $_POST['quantity'])) {
+    header('Location: ../Pages/ShoppingCart.php');
 
+    $product_id = $_POST['product_id'];
+    $quantity = $_POST['quantity'];
 
-$action = filter_input(INPUT_GET, 'action');
-switch ($action){
-
- case 'cart':
-    displayCart();
-    break;
-    case 'addToCart':
-    $id = filter_input(INPUT_GET, 'id');
-    $quantity = filter_input(INPUT_GET, 'quantity');
-
-    addItem($id,$quantity);
-
-    displayCart();
-    break;
-
-     case 'removeFromCart':
-    $id = filter_input(INPUT_GET, 'id');
-    removeItemFromCart($id);
-    displayCart();
-    break;
-
-    case 'changeCartQuantity':
-    $id = filter_input(INPUT_GET, 'id');
-    $amount = filter_input(INPUT_POST, 'amount');
-    if($amount == 'increase'){
-        increaseCartQuantity($id);
+    echo $product_id + $quantity;
+    if (isset($_SESSION['Username'])) {
+        // Call your PHP function to add the item to the cart
+        echo $product_id + $quantity;
+        $Cart->addItem($product_id, $quantity);
+        // Redirect to the previous page or wherever you need to go next
+        header('Location: ../Pages/ShoppingCart.php');
+        exit;
     } else {
-        reduceCartQuantity($id);
+        // Redirect to the login page
+        header('Location: Login.php');
+        exit;
     }
-    displayCart();
-    break;
-
-
 }
+
+//
+//$action = filter_input(INPUT_GET, 'action');
+//switch ($action){
+//
+// case 'cart':
+//    displayCart();
+//    break;
+//    case 'addToCart':
+//    $id = filter_input(INPUT_GET, 'id');
+//    $quantity = filter_input(INPUT_GET, 'quantity');
+//
+//    addItem($id,$quantity);
+//
+//    displayCart();
+//    break;
+//
+//     case 'removeFromCart':
+//    $id = filter_input(INPUT_GET, 'id');
+//    removeItemFromCart($id);
+//    displayCart();
+//    break;
+//
+//    case 'changeCartQuantity':
+//    $id = filter_input(INPUT_GET, 'id');
+//    $amount = filter_input(INPUT_POST, 'amount');
+//    if($amount == 'increase'){
+//        increaseCartQuantity($id);
+//    } else {
+//        reduceCartQuantity($id);
+//    }
+//    displayCart();
+//    break;
+//
+//
+//}
 
 
 

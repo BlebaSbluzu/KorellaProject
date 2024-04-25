@@ -101,7 +101,7 @@ Sign up here!
 
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Shopping Cart</a>
+                    <a class="nav-link active" aria-current="page" href="ShoppingCart.php">Shopping Cart</a>
                 </li>
 
 
