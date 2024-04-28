@@ -27,9 +27,6 @@ $emailValidation = validateEmail($email);
 
 
 //displays our validation results
-echo "Username Validation: " . $usernameValidation . "<br>";
-echo "Password Validation: " . $passwordValidation . "<br>";
-echo "Email Validation: " . $emailValidation . "<br>";
 
 //checks if conditions are true
 if ($usernameValidation === "" && $passwordValidation === "Password validation passed." && $emailValidation === "") {
