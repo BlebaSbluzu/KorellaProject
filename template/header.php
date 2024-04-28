@@ -7,6 +7,8 @@ session_start();
 //$session = new session();
 
 use classes\session;
+use classes\Carts;
+
 require_once '../classes/session.php';
 require '../classes/Carts.php';
 

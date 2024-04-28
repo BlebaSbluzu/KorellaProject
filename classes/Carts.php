@@ -1,16 +1,14 @@
 <?php
 
-
+namespace classes;
 class Carts
 {
-public $CartItems = array();
+    public $CartItems = [];
+
     public function additem($newItem,$quantity)
     {
-
         if($quantity == null||0){
-
             $quantity = 1;
-
         }
 
         $found = false;
@@ -24,7 +22,7 @@ public $CartItems = array();
         }
 
         if(!$found) {
-                $this->CartItems[] = ['itemID' => $newItem, 'quantity' => $quantity];
+                $this->CartItems[] = ['itemID' => $newItem, 'quantity' => $quantity]; //push onto array not overwrite
             }
 
     }
@@ -34,7 +32,7 @@ public $CartItems = array();
     {
 
  if(isset($_SESSION['Cart'])){
-        $cartItems = $_SESSION['Cart'];
+        $CartItems = $_SESSION['Cart'];
     }
  return this->$CartItems;
 }

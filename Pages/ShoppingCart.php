@@ -1,11 +1,10 @@
 <?php
 include '../Layout/navbar.php';
 require '../src/DBconnect.php';
-require "../classes/Carts.php";
-require_once('../template/header.php');
+require_once ('../template/header.php');
 
 
-var_dump($_SESSION['Cart']->$CartItems);
+var_dump($_SESSION);
 
 if (isset($_SESSION['Cart'])) {
 

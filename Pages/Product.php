@@ -3,7 +3,6 @@ require "../Layout/navbar.php";
 
 require '../src/DBconnect.php';
 
-require_once('../classes/Carts.php');
 require_once ('../template/header.php');
 
 
@@ -60,9 +59,9 @@ $product_id = $_GET['param'];
                 <button class="quantitybtns addminus" type="button" onclick="increaseQuantity()">+</button>
 
                     <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
+                <?php echo $product_id; ?>
 
-
-                                <button onclick="alertfunc()"  id="CartBtn">Add to Cart</button>
+                                <button onclick={<?php $Cart->additem($product_id,1); var_dump("TEST");?>}  id="CartBtn">Add to Cart</button>
 
 <!--                <button type="submit"  id="CartBtn">Add to Cart</button>-->
 <!--                </form>-->
@@ -80,6 +79,7 @@ $product_id = $_GET['param'];
     }
 
     else {
+        echo "";
         echo "No product found with the given ID.";
     }
     } else {
@@ -95,7 +95,7 @@ $product_id = $_GET['param'];
     function decreaseQuantity() {
         var quantityInput = document.getElementById('quantity');
 
-        if (parseInt(quantityInput.value) == '1'||1){
+        if (parseInt(quantityInput.value) == '1'||parseInt(quantityInput.value) == 1){
             quantityInput.value = parseInt(quantityInput.value) == '1'||1
         }
         else{

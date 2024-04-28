@@ -1,5 +1,17 @@
 #cardStyles{
     width:100px;
+
+    margin: 1rem ;
+    background-color: #c1fabc;
+    border: none;
+    font-size: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+#emptyCardStyles{
+    width:250px;
+    height: 250px;
     margin: 1rem ;
     background-color: #c1fabc;
     border: none;
