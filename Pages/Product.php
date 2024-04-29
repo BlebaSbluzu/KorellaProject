@@ -46,14 +46,36 @@ $product_id = $_GET['param'];
 
 
 <?php
-
-if (isset($_POST['addButton'])) {
-
-
-
-
-
-}
+//
+//if (isset($_POST['addButton'])) {
+//
+/*    $sql2 = "select * from users where username = <?php echo $_SESSION[username]?>";*/
+//    $userDetails = (($connection->prepare($sql2))->execute())->fetchAll();
+//
+//var_dump($userDetails);
+//    $sql = "INSERT INTO ShoppingCart (user_id,product_id,quantity)
+// VALUES ( :user_id, :product_id, :quantity)";
+//
+//    $stmt = $pdo->prepare($sql);
+//
+//    $stmt->bindParam(':user_id', $userDetails["id"], PDO::PARAM_INT);
+//    $stmt->bindParam(':product_id', $product_id, PDO::PARAM_INT);
+//    $stmt->bindParam(':quantity', $quantity, PDO::PARAM_INT);
+//
+//    $stmt->execute();
+//
+//
+//
+//    $statement = $connection->prepare($sql);
+//
+////    I found fetchColumn() on the php.net documentation
+//    $count = $statement->fetchColumn();
+//
+//    $statement->execute();
+//    $result = $statement->fetchAll();
+//
+//
+//}
 ?>
 
 

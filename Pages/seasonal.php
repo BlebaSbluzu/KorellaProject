@@ -46,13 +46,12 @@ $backgroundImage = strtolower($season) . "-header.jpg";
 </div>
 
 
-
     <div class="shopStyle">
     <?php
 $Spring = new ProductSet("Spring", "SELECT * from product where SEASON = 'Spring' ");?>
     </div>
 
-<?php include "../template/footer.php"; ?>
+
     <div class="shopStyle">
         <?php
 $Summer = new ProductSet("Summer", "SELECT * from product where SEASON = 'Summer' ");
@@ -68,6 +67,8 @@ $Autumn = new ProductSet("Autumn", "SELECT * from product where SEASON = 'Autumn
 $Winter = new ProductSet("Winter", "SELECT * from product where SEASON = 'Winter' ");
 
 ?>
+
+                <?php include "../template/footer.php"; ?>
 </div>
 
 
