@@ -21,7 +21,6 @@
     <?php
 
     require_once('../template/header.php');
-
 //    echo '<p>'; print_r($_SESSION); echo '</p>';
 
         if (isset($_SESSION['Username'])) {
@@ -89,9 +88,9 @@ Sign up here!
                        <!-- <li><a class="dropdown-item" href="#">Trees</a></li>
                         <li><a class="dropdown-item" href="#">Shrubs</a></li>flowers vine
                         -->
-                        <li><a class="dropdown-item" href="../Pages/shop.php?category=tree">Trees</a></li>
-                        <li><a class="dropdown-item" href="../Pages/shop.php?category=shrub">Shrubs</a></li>
-                        <li><a class="dropdown-item" href="../Pages/shop.php?category=flower">Flowers</a></li>
+                        <li><a class="dropdown-item" href="../Pages/shop.php?category=Trees">Trees</a></li>
+                        <li><a class="dropdown-item" href="../Pages/shop.php?category=Shrubs">Shrubs</a></li>
+                        <li><a class="dropdown-item" href="../Pages/shop.php?category=Flowers">Flowers</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
 
@@ -144,24 +143,15 @@ Sign up here!
 
 
 
-                }
-
-
-//                require ('../Pages/search.php');?>
+                }?>
             </ul>
 
-            <?php
 
 
-            ?>
-
-<!--        <form method="post" class="d-flex">-->
-<!--            <input id="searchBox" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
-<!---->
-<!---->
-<!---->
-<!--            <button href="../Pages/search.php?param=searchBox.id" id="searchBtn" class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i>Search</button>-->
-<!--        </form>-->
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i>Search</button>
+        </form>
 
 <!--            <form class="d-flex" role="search">-->
 <!--                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->

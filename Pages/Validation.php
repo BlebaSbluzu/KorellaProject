@@ -1,31 +1,3 @@
-<!---Code based on Seasonal Validation that we used--->
-<?php
-// Season will appear based on the current month.
-$month = date('n');
-
-// Uncomment for our guidance testing
-// $month = 4; // Spring: April
-// $month = 7; // Summer: July
-// $month = 10; // Autumn: October
-// $month = 1; // Winter: January
-
-// Determines each season by the month starting with winter.
-$season = 'Winter';
-if ($month >= 3 && $month <= 5) {
-    $season = 'Spring';
-} elseif ($month >= 6 && $month <= 8) {
-    $season = 'Summer';
-} elseif ($month >= 9 && $month <= 11) {
-    $season = 'Autumn';
-}
-
-// Seasonal image change.
-$backgroundImage = strtolower($season) . "-header.jpg";
-
-?>
-
-
-<!-- Code we use for User Validation-->
 <?php
 // function used to clean and secure form
 function test_input($data) {
@@ -33,42 +5,6 @@ function test_input($data) {
     $data = stripslashes($data); //removes backslashes
     $data = htmlspecialchars($data); //specialchars to html
     return $data;
-}
-
-//validating our form submission
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'] ?? '';
-    $password = $_POST['password'] ?? '';
-    $email = $_POST['email'] ?? '';
-
-//checks data requirements
-    $usernameValidation = validateUsername($username);
-    $passwordValidation = validatePassword($password);
-    $emailValidation = validateEmail($email);
-
-
-//checks if conditions are true
-    if ($usernameValidation === "" && $passwordValidation === "Password validation passed." && $emailValidation === "") {
-        try {
-            $new_user = array(
-                "username" => escape($_POST['username']),
-                "password" => escape($_POST['password']),
-                "email" => escape($_POST['email']),
-                "date" => date("Y-m-d")
-            );
-            $sql = sprintf("INSERT INTO %s (%s) values (%s)", "users",
-                implode(", ", array_keys($new_user)),
-                ":" . implode(", :", array_keys($new_user)));
-            $statement = $connection->prepare($sql);
-            $statement->execute($new_user);
-            if ($statement) {
-                header("location: Login.php");
-                exit;
-            }
-        } catch (PDOException $error) {
-            echo $sql . "<br>" . $error->getMessage();
-        }
-    }
 }
 
 // Validates username //each regex pattern used from the resource preg_match.php
@@ -114,22 +50,6 @@ function validateDate($date) {
         return "Invalid date.";
     } else {
         return "Date validation passed.";
-    }
-}
-
-$usernameError = $passwordError = $emailError = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'] ?? '';
-    $password = $_POST['password'] ?? '';
-    $email = $_POST['email'] ?? '';
-
-    $usernameError = validateUsername($username);
-    $passwordError = validatePassword($password);
-    $emailError = validateEmail($email);
-
-    if (!$usernameError && !$passwordError && !$emailError) {
-        //save to database
-        echo '<p class="success">Form submitted successfully!</p>';
     }
 }
 ?>
