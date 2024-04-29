@@ -12,3 +12,4 @@ require '../src/DBconnect.php';
 
 <?php
 
+include "../template/footer.php"; ?>

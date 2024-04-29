@@ -39,6 +39,7 @@ echo "didnt work";
 
 
 ?>
+<?php include "../template/footer.php"; ?>
 <!--<div class="shopStyle">-->
 <?php
 //
