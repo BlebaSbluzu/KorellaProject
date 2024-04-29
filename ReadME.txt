@@ -39,7 +39,7 @@ Made these files and classes:
 -Implemented the majority of writing from database instances where advertising products in my php object ProductSet
 -Made .gitignore for various teammates different db connection details
 
-
+-Made all attempts at creating functional Cart/ShoppingCart classes
 
 
 B00153270 Jakub Domurat:
