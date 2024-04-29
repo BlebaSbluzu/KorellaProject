@@ -26,6 +26,7 @@ $passwordValidation = validatePassword($password);
 $emailValidation = validateEmail($email);
 
 
+
 //checks if conditions are true
     if ($usernameValidation === "" && $passwordValidation === "Password validation passed." && $emailValidation === "") {
     try {

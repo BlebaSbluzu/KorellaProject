@@ -85,7 +85,7 @@ $product_id = $_GET['param'];
 
 <?php
     // SQL to select product details based on product ID
-    $sql = "SELECT * FROM products WHERE productID = $product_id";
+    $sql = "SELECT * FROM product WHERE productID = $product_id";
     $result = $connection->query($sql);
 
     if ($result->rowCount() > 0) {
