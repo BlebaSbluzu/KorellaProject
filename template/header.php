@@ -14,28 +14,31 @@ require '../classes/Carts.php';
 
 $session = new session();
 $Cart = new Carts();
+$_SESSION['cart'] = $Cart;
+
+//$Cart->additem(1,1);
 //$session->killSession();
 
-if (isset($_POST['product_id'], $_POST['quantity'])) {
-    header('Location: ../Pages/ShoppingCart.php');
-
-    $product_id = $_POST['product_id'];
-    $quantity = $_POST['quantity'];
-
-    echo $product_id + $quantity;
-    if (isset($_SESSION['Username'])) {
-        // Call your PHP function to add the item to the cart
-        echo $product_id + $quantity;
-        $Cart->addItem($product_id, $quantity);
-        // Redirect to the previous page or wherever you need to go next
-        header('Location: ../Pages/ShoppingCart.php');
-        exit;
-    } else {
-        // Redirect to the login page
-        header('Location: Login.php');
-        exit;
-    }
-}
+//if (isset($_POST['product_id'], $_POST['quantity'])) {
+//    header('Location: ../Pages/ShoppingCart.php');
+//
+//    $product_id = $_POST['product_id'];
+//    $quantity = $_POST['quantity'];
+//
+//    echo $product_id + $quantity;
+//    if (isset($_SESSION['Username'])) {
+//        // Call your PHP function to add the item to the cart
+//        echo $product_id + $quantity;
+//        $Cart->addItem($product_id, $quantity);
+//        // Redirect to the previous page or wherever you need to go next
+//        header('Location: ../Pages/ShoppingCart.php');
+//        exit;
+//    } else {
+//        // Redirect to the login page
+//        header('Location: Login.php');
+//        exit;
+//    }
+//}
 
 //
 //$action = filter_input(INPUT_GET, 'action');

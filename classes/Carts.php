@@ -7,37 +7,36 @@ class Carts
 
     public function additem($newItem,$quantity)
     {
-        if($quantity == null||0){
-            $quantity = 1;
-        }
+//        $this->CartItems->array_push($newItem, $quantity);
 
-        $found = false;
-        foreach ($this->CartItems as $item) {
-            if ($item['itemID'] === $newItem) {
+        array_push($this->CartItems, $newItem);
 
-                $item['quantity'] += $quantity;
-                $found = true;
-                break;
-            }
-        }
+//        $this->CartItems[] = ($newItem + $quantity);
 
-        if(!$found) {
-                $this->CartItems[] = ['itemID' => $newItem, 'quantity' => $quantity]; //push onto array not overwrite
-            }
-
+//        if($quantity == null||0){
+//            $quantity = 1;
+//        }
+//
+//        $found = false;
+//        foreach ($this->CartItems as $item) {
+//            if ($item['itemID'] === $newItem) {
+//
+//                $item['quantity'] += $quantity;
+//                $found = true;
+//                break;
+//            }
+//        }
+//
+//        if(!$found) {
+//                $this->CartItems[] = ['itemID' => $newItem, 'quantity' => $quantity]; //push onto array not overwrite
+//            }
     }
-
 
     function getShoppingCart()
     {
-
- if(isset($_SESSION['Cart'])){
-        $CartItems = $_SESSION['Cart'];
+        if (isset($_SESSION['Cart'])) {
+            $CartItems = $_SESSION['Cart'];
+        }
+        return this->$CartItems;
     }
- return this->$CartItems;
-}
-
-
-
-
 }
