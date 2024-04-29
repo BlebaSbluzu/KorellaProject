@@ -73,6 +73,7 @@ try {
     <p>Password: <?php echo escape($user['Password']); ?></p>
     <?php echo $message; ?>
 
+
     <h2>Update Account Details</h2>
     <form method="post">
         <p>New Username: <input type="text" name="new_username" value="<?php echo escape($user['username']); ?>"><br></p>
@@ -85,3 +86,6 @@ try {
 <?php endif; ?>
 </body>
 </html>
+<?php
+include "../template/footer.php"; ?>
+

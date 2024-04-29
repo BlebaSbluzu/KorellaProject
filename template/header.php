@@ -1,39 +1,60 @@
 <?php
-
-
 session_start();
+
+
+//if (!isset($_SESSION['counter'])) $_SESSION['counter']=0;
+//echo "Refreshed ".$_SESSION['counter']++." times.<br>
+//<a href=".$_SERVER['PHP_SELF'].'?'.session_name().'='.session_id().">refresh</a>";
+//
+//if (!isset($_SESSION['counter'])) $_SESSION['counter']=0;
+//echo "Refreshed ".$_SESSION['counter']++." times.<br>
+//<a href=".$_SERVER['PHP_SELF'].">refresh</a>";
+
+//if (!isset($_SESSION['counter'])) $_SESSION['counter']=0;
+//echo "Refreshed ".$_SESSION['counter']++." times.<br>
+//<a href=".$_SERVER['PHP_SELF'].'?'.session_name().'='.session_id().">refresh</a>";
+//
 
 //use classes\session;
 //$session = new session();
 
 use classes\session;
+use classes\Carts;
+
 require_once '../classes/session.php';
 require '../classes/Carts.php';
 
-$session = new session();
+
 $Cart = new Carts();
+$_SESSION['cart'] = $Cart;
+
+$Cart2 = array();
+
+$_SESSION['cart2'] = $Cart2;
+$session = new session();
+//$Cart->additem(1,1);
 //$session->killSession();
 
-if (isset($_POST['product_id'], $_POST['quantity'])) {
-    header('Location: ../Pages/ShoppingCart.php');
-
-    $product_id = $_POST['product_id'];
-    $quantity = $_POST['quantity'];
-
-    echo $product_id + $quantity;
-    if (isset($_SESSION['Username'])) {
-        // Call your PHP function to add the item to the cart
-        echo $product_id + $quantity;
-        $Cart->addItem($product_id, $quantity);
-        // Redirect to the previous page or wherever you need to go next
-        header('Location: ../Pages/ShoppingCart.php');
-        exit;
-    } else {
-        // Redirect to the login page
-        header('Location: Login.php');
-        exit;
-    }
-}
+//if (isset($_POST['product_id'], $_POST['quantity'])) {
+//    header('Location: ../Pages/ShoppingCart.php');
+//
+//    $product_id = $_POST['product_id'];
+//    $quantity = $_POST['quantity'];
+//
+//    echo $product_id + $quantity;
+//    if (isset($_SESSION['Username'])) {
+//        // Call your PHP function to add the item to the cart
+//        echo $product_id + $quantity;
+//        $Cart->addItem($product_id, $quantity);
+//        // Redirect to the previous page or wherever you need to go next
+//        header('Location: ../Pages/ShoppingCart.php');
+//        exit;
+//    } else {
+//        // Redirect to the login page
+//        header('Location: Login.php');
+//        exit;
+//    }
+//}
 
 //
 //$action = filter_input(INPUT_GET, 'action');

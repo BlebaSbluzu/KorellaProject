@@ -58,7 +58,7 @@ $homeRow1 = new ProductSet("Popular Items","Select * from product limit 4;");
 ?>
 
 </div>
-
+<?php include "../template/footer.php" ?>
 
 <!--<div class="Titles">-->
 <!--    <hr class="hrs">-->

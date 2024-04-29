@@ -2,6 +2,7 @@
 <?php require_once('../template/header.php');
 require "../common.php";
 require '../src/DBconnect.php';
+
 ?>
 
 
@@ -12,7 +13,6 @@ if (isset($_SESSION['Username'])) {
         exit;
 
 }
-
 
 //validating our form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -26,10 +26,9 @@ $passwordValidation = validatePassword($password);
 $emailValidation = validateEmail($email);
 
 
-//displays our validation results
 
 //checks if conditions are true
-if ($usernameValidation === "" && $passwordValidation === "Password validation passed." && $emailValidation === "") {
+    if ($usernameValidation === "" && $passwordValidation === "Password validation passed." && $emailValidation === "") {
     try {
         $new_user = array(
             "username" => escape($_POST['username']),
@@ -148,3 +147,4 @@ if ($usernameValidation === "" && $passwordValidation === "Password validation p
 </div>
 </body>
 </html>
+<?php include "../template/footer.php";?>
