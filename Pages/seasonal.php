@@ -1,5 +1,7 @@
 <?php require "../Layout/navbar.php";
-include "./ProductSet.php";?>
+include "./ProductSet.php";
+
+?>
 
 <?php
 //season will appear based on current month ref: function.date.php
@@ -43,16 +45,14 @@ $backgroundImage = strtolower($season) . "-header.jpg";
     </div>
 </div>
 
-<?php
-?>
+
 
     <div class="shopStyle">
     <?php
 $Spring = new ProductSet("Spring", "SELECT * from product where SEASON = 'Spring' ");?>
     </div>
 
-
-
+<?php include "../template/footer.php"; ?>
     <div class="shopStyle">
         <?php
 $Summer = new ProductSet("Summer", "SELECT * from product where SEASON = 'Summer' ");
@@ -69,4 +69,8 @@ $Winter = new ProductSet("Winter", "SELECT * from product where SEASON = 'Winter
 
 ?>
 </div>
+
+
+
+
 
