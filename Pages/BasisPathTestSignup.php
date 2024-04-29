@@ -11,7 +11,7 @@ function validateEmail($email) {
     return !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 
-// Simulated test function
+
 function testRegistration($username, $password, $email, $sessionExists) {
     if ($sessionExists) {
         echo "Already logged in. Test failed.\n";

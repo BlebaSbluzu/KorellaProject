@@ -8,7 +8,7 @@ function test_input($data)
 }
 
 function ValidateID($productID) {
-    // Check if the product name is not empty and is a string
+    //from php.net/manual/en/function.is-string.php
     if (empty($productID) || !is_string($productID)) {
         return "Invalid Product ID: must be a non-empty string.";
     }
@@ -16,13 +16,13 @@ function ValidateID($productID) {
 }
 
 function ValidateName($ProductName) {
-    // Check if the product ID is alphanumeric
+    // Validates Name //each regex pattern used from the resource preg_match.php
     if (!preg_match('/^[a-zA-Z0-9]+$/', $ProductName)) {
         return "Invalid Product ID: must be alphanumeric.";
     }
     return "Product ID validation passed.";
 }
-
+//from php.net/manual/en/function.is-numeric.php
 function ValidatePrice($Price) {
     // Check if the price is a numeric value
     if (!is_numeric($Price)) {
@@ -32,7 +32,7 @@ function ValidatePrice($Price) {
 }
 
 function ValidateSize($Size) {
-    // Validate that size is provided in an expected format, e.g., "2 feet"
+    // Validates size //each regex pattern used from the resource preg_match.php
     if (!preg_match('/^\d+\s(feet|inches|cm|m)$/', $Size)) {
         return "Invalid Size: must specify number and unit (feet, inches, cm, m).";
     }
