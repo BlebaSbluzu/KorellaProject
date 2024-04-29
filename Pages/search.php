@@ -1,11 +1,30 @@
 <?php
 
-require '../Layout/navbar.php'; //redirected here from navbar
+//require '../Layout/navbar.php'; //redirected here from navbar
 require_once '../src/DBconnect.php';
 include "./ProductSet.php";
 require "../common.php";
 
 
+
+
+
+if (isset($_POST['searchBtn'])) {
+        echo "received";
+
+    header("Location: search.php");
+
+    require '../Layout/navbar.php';
+
+
+?>
+
+
+
+<?php
+
+
+}
 //function get_search_query( $escaped = true ) {
 //    /**
 //     * Filters the contents of the search query variable.

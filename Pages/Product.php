@@ -6,43 +6,57 @@ require '../src/DBconnect.php';
 require_once ('../template/header.php');
 
 
-//var_dump($Cart->CartItems);
-
+var_dump($Cart->CartItems);
 $product_id = "";
-
 if (isset($_GET['param'])) {
 $product_id = $_GET['param'];
+//---VERY strong attempt at using sessions for cart---
 
+//if (isset($_POST['addButton'])) {
+//    //check if item exists in array
+//    if(!array_key_exists($_POST['product_id'],$_SESSION['cart']->CartItems)){
+//        $_SESSION['cart']->CartItems[$_POST['product_id']] = $_POST['quantity'];
+//    }else{
+//       //get quantity in session, add new quantity and save in session
+//    }
+//    if(!array_key_exists($_POST['product_id'],$_SESSION['cart2'])){
+//        $_SESSION['cart2'][$_POST['product_id']] = $_POST['quantity'];
+//    }else{
+//        //get quantity in session, add new quantity and save in session
+//    }
+//    var_export(
+//        array_key_exists($_POST['product_id'],$_SESSION['cart']->CartItems)
+//    );
+//    var_export(
+//        array_key_exists($_POST['product_id'],$_SESSION['cart2'])
+//    );
 
-if (isset($_POST['addButton'])) {
-    //check if item exists in array
-    if(!array_key_exists($_POST['product_id'],$_SESSION['cart']->CartItems)){
-        $_SESSION['cart']->CartItems[$_POST['product_id']] = $_POST['quantity'];
-    }else{
-       //get quantity in session, add new qjuantity and save in session
-
-
-
-    }
-    var_export(
-        array_key_exists($_POST['product_id'],$_SESSION['cart']->CartItems)
-    );
-
+    //comm
 //    $item=new CartItem();
 //    $item->set_item($_POST['product_id']);
 //    $item->set_quantity($_POST['quantity']);
-
-
 //    array_push($_SESSION['cart']->CartItems,$item);
-    echo json_encode($_SESSION['cart']->CartItems);
+    //uncomm
+//    echo json_encode($_SESSION['cart']->CartItems);
+//}
+//if (isset($_POST['button2'])) {
+//    echo "This is Button2 that is selected";
+//}
+//?>
+
+
+<?php
+
+if (isset($_POST['addButton'])) {
+
+
+
+
+
 }
-if (isset($_POST['button2'])) {
-    echo "This is Button2 that is selected";
-}
-
-
-
 ?>
+
+
 <link rel="stylesheet" href="../CSS/Products.css" type="text/css">
 
 <div class="sacramento-regular" id="ProductPage">

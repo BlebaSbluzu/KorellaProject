@@ -1,7 +1,19 @@
 <?php
-
-
 session_start();
+
+
+//if (!isset($_SESSION['counter'])) $_SESSION['counter']=0;
+//echo "Refreshed ".$_SESSION['counter']++." times.<br>
+//<a href=".$_SERVER['PHP_SELF'].'?'.session_name().'='.session_id().">refresh</a>";
+//
+//if (!isset($_SESSION['counter'])) $_SESSION['counter']=0;
+//echo "Refreshed ".$_SESSION['counter']++." times.<br>
+//<a href=".$_SERVER['PHP_SELF'].">refresh</a>";
+
+//if (!isset($_SESSION['counter'])) $_SESSION['counter']=0;
+//echo "Refreshed ".$_SESSION['counter']++." times.<br>
+//<a href=".$_SERVER['PHP_SELF'].'?'.session_name().'='.session_id().">refresh</a>";
+//
 
 //use classes\session;
 //$session = new session();
@@ -12,10 +24,14 @@ use classes\Carts;
 require_once '../classes/session.php';
 require '../classes/Carts.php';
 
-$session = new session();
+
 $Cart = new Carts();
 $_SESSION['cart'] = $Cart;
 
+$Cart2 = array();
+
+$_SESSION['cart2'] = $Cart2;
+$session = new session();
 //$Cart->additem(1,1);
 //$session->killSession();
 
